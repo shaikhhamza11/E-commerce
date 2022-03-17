@@ -1,0 +1,115 @@
+#header {
+  font-size: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  color: var(--txt-color-dark);
+  background: var(--bg-primary);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+#navbar ul li {
+  list-style-type: none;
+  padding: 0 2rem;
+  font-size: 2rem;
+  position: relative;
+}
+
+#navbar ul li a:hover,
+#navbar ul li a.active {
+  color: var(--hover-color);
+}
+#navbar ul li a.active::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 4px;
+  background-color: var(--hover-color);
+  bottom: -6px;
+  right: 18px;
+}
+
+#navbar .toggle {
+  display: flex;
+}
+#account-dropdown + div ul li:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+#account-dropdown + div ul li a {
+  display: block;
+  margin: 2rem;
+  min-height: 2rem;
+  background: transparent;
+}
+
+#account-up {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+#close-navbar {
+  display: none;
+}
+@media only screen and (max-width: 850px) {
+  /* header */
+  #navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 30rem;
+    background: var(--bg-primary);
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.4);
+    padding: 8rem 0 1rem 0;
+    display: none;
+    transition: 0.3s;
+  }
+  #close-navbar {
+    display: flex;
+    position: absolute;
+    display: flex;
+    position: absolute;
+    top: 12px;
+    right: 24px;
+  }
+  #navbar ul li {
+    margin-bottom: 2.5rem;
+  }
+  .menu {
+    display: none;
+  }
+  #hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #hamburger a {
+    padding: 0 1rem;
+    margin: 0.4rem;
+    font-size: 2rem;
+  }
+  #hamburger .active {
+    display: flex;
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 477px) {
+  #header {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  #header {
+    width: 100%;
+  }
+}
