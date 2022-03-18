@@ -1,11 +1,12 @@
 import React from "react";
-import { Route, Routes, Navigate } from "react-router";
+import { Route, Routes } from "react-router";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import Login from "./pages/Login/Login";
 import Store from "./pages/Store/Store";
 import SignUp from "./pages/Sign-up/SignUp";
+import Mockman from "mockman-js";
 
 export default function Router() {
   return (
@@ -17,6 +18,7 @@ export default function Router() {
         <Route path="/wishlist" element={<Wishlist />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/sign-up" element={<SignUp />}></Route>
+        <Route path="/mockman" element={<Mockman />} />
       </Routes>
     </div>
   );

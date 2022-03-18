@@ -1,4 +1,4 @@
-#header {
+.header {
   font-size: 3rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   color: var(--txt-color-dark);
@@ -8,18 +8,18 @@
   left: 0;
   z-index: 10;
 }
-#navbar ul li {
+.Navbar ul li {
   list-style-type: none;
   padding: 0 2rem;
   font-size: 2rem;
   position: relative;
 }
 
-#navbar ul li a:hover,
-#navbar ul li a.active {
+.Navbar ul li a:hover,
+.Navbar ul li a.active {
   color: var(--hover-color);
 }
-#navbar ul li a.active::after {
+.Navbar ul li a.active::after {
   content: "";
   position: absolute;
   width: 5rem;
@@ -29,33 +29,19 @@
   right: 18px;
 }
 
-#navbar .toggle {
+.Navbar .toggle {
   display: flex;
 }
-#account-dropdown + div ul li:first-child {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
 
-#account-dropdown + div ul li a {
-  display: block;
-  margin: 2rem;
-  min-height: 2rem;
-  background: transparent;
-}
-
-#account-up {
+.hamburger {
   display: none;
 }
-
-#hamburger {
-  display: none;
-}
-#close-navbar {
+.close-navbar {
   display: none;
 }
 @media only screen and (max-width: 850px) {
   /* header */
-  #navbar ul {
+  .Navbar ul {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -71,7 +57,7 @@
     display: none;
     transition: 0.3s;
   }
-  #close-navbar {
+  .close-navbar {
     display: flex;
     position: absolute;
     display: flex;
@@ -79,37 +65,37 @@
     top: 12px;
     right: 24px;
   }
-  #navbar ul li {
+  .Navbar ul li {
     margin-bottom: 2.5rem;
   }
   .menu {
     display: none;
   }
-  #hamburger {
+  .hamburger {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
-  #hamburger a {
+  .hamburger a {
     padding: 0 1rem;
     margin: 0.4rem;
     font-size: 2rem;
   }
-  #hamburger .active {
+  .hamburger .active {
     display: flex;
   }
 }
 
 /* mobile */
 @media only screen and (max-width: 477px) {
-  #header {
+  .header {
     font-size: 2.5rem;
     padding: 1rem 2rem;
     width: 100%;
   }
 }
 @media only screen and (max-width: 360px) {
-  #header {
+  .header {
     width: 100%;
   }
 }

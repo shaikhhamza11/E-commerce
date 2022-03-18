@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <header id="header" className="flex align-center justify-sb p-2-5 fw-bold">
+    <header className="header flex align-center justify-sb p-2-5 fw-bold">
       <NavLink to="/" className="navbar-brand fs-3">
         SportsKart
       </NavLink>
-      <nav id="navbar">
-        <ul className="flex align-center justify-sb p-2" id="navbar-lists">
+      <nav className="Navbar">
+        <ul className="flex align-center justify-sb p-2">
           <li>
             <NavLink
               to="/"
@@ -42,7 +42,7 @@ export default function Navbar() {
           </li>
           <li>
             <NavLink
-              to="/cart"
+              to="/wishlist"
               className={(navData) =>
                 navData.isActive ? "active fw-semi-bold" : "fw-semi-bold"
               }
@@ -70,15 +70,11 @@ export default function Navbar() {
               Sign-up
             </NavLink>{" "}
           </li>
-          <i className="fa-solid fa-xmark fa-1x" id="close-navbar"></i>
+          <i className="close-navbar fa-solid fa-xmark fa-1x" id=""></i>
         </ul>
       </nav>
-      <div id="hamburger">
-        <i
-          className="fa-solid fa-bars"
-          id="bar"
-          onClick={() => console.log("hello")}
-        ></i>
+      <div className="hamburger">
+        <i className="fa-solid fa-bars" id="bar"></i>
       </div>
     </header>
   );
