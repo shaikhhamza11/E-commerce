@@ -5,16 +5,18 @@ import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./router";
-import "../node_modules/font-awesome/css/font-awesome.min.css";
-
+import { ProductProvider } from "./context/product-context";
 // Call make Server
 makeServer();
+
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
-      <Router />
+      <ProductProvider>
+        <App />
+        <Router />
+      </ProductProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

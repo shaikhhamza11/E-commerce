@@ -1,15 +1,22 @@
 import React from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isActive, setIsActive] = useState(false);
+
   return (
-    <header className="header flex align-center justify-sb p-2-5 fw-bold">
+    <header className="header flex align-center justify-sb p-2-5 fw-bold ">
       <NavLink to="/" className="navbar-brand fs-3">
         SportsKart
       </NavLink>
       <nav className="Navbar">
-        <ul className="flex align-center justify-sb p-2">
+        <ul
+          className={`flex align-center justify-sb p-2  ${
+            isActive ? "toggle" : ""
+          }`}
+        >
           <li>
             <NavLink
               to="/"
@@ -68,12 +75,15 @@ export default function Navbar() {
               }
             >
               Sign-up
-            </NavLink>{" "}
+            </NavLink>
           </li>
-          <i className="close-navbar fa-solid fa-xmark fa-1x" id=""></i>
+          <i
+            className="close-navbar fa-solid fa-xmark fa-1x"
+            onClick={() => setIsActive(false)}
+          ></i>
         </ul>
       </nav>
-      <div className="hamburger">
+      <div className="hamburger" onClick={() => setIsActive(true)}>
         <i className="fa-solid fa-bars" id="bar"></i>
       </div>
     </header>

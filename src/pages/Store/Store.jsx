@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Store() {
+const Store = () => {
   return <div>Store</div>;
-}
+};
+
+export default Store;

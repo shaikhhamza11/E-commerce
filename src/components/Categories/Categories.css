@@ -1,0 +1,9 @@
+.categories {
+  display: grid;
+}
+
+@media only screen and (max-width: 690px) {
+  .lap-one {
+    grid-template-columns: 1fr;
+  }
+}

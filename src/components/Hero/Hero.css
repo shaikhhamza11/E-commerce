@@ -1,0 +1,61 @@
+.Hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "hero-content hero-img";
+  height: 90vh;
+  width: 100%;
+  background: var(--bg-primary);
+  padding: 0 8rem;
+  position: relative;
+  z-index: 5;
+}
+.Hero .hero-img {
+  grid-area: hero-img;
+  display: flex;
+  align-items: center;
+  width: 50rem;
+}
+.Hero .hero-content {
+  grid-area: hero-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+}
+.Hero h2 {
+  color: var(--hover-color);
+}
+.Hero h1 {
+  font-size: 5.2rem;
+}
+.Hero button {
+  border: 2px solid transparent;
+  cursor: pointer;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+@media only screen and (max-width: 850px) {
+  .Hero {
+    height: 85vh;
+    padding: 4rem;
+    grid-template-columns: 1fr;
+  }
+  .Hero .hero-content {
+    align-items: center;
+  }
+  .Hero .hero-content h2 {
+    font-size: 2.2rem;
+  }
+  .Hero .hero-img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 477px) {
+  .Hero h1 {
+    font-size: 3rem;
+  }
+  .Hero .hero-content h2 {
+    font-size: 1.7rem;
+  }
+}

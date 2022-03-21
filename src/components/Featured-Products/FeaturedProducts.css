@@ -1,0 +1,27 @@
+.featured-product {
+  padding: 4rem 8rem;
+}
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+@media only screen and (max-width: 850px) {
+  .featured-product .product-container {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 477px) {
+  .featured-product h1 {
+    font-size: 4rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  #featured-product h1 {
+    font-size: 2rem;
+  }
+  #featured-product h2 {
+    font-size: 1.5rem;
+  }
+}

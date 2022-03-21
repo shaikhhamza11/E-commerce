@@ -1,11 +1,19 @@
 import React from "react";
-import Hero from "../Hero/Hero";
-import FeaturedProducts from "../Featured-Products/FeaturedProducts";
-export default function Home() {
+import { Hero, FeaturedProducts,Categories,Footer } from "../../components/componentExport";
+
+
+
+
+
+const Home = () => {
   return (
-    <div className="flex justify-center align-center f-dxl">
+    <div>
       <Hero />
+      <Categories />
       <FeaturedProducts />
+      <Footer/>
     </div>
   );
-}
+};
+
+export default Home;
