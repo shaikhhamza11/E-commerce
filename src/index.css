@@ -52,6 +52,18 @@ label {
 .border-bottom {
   border-bottom: 2px solid #333;
 }
+.btn-primary {
+  background-color: var(--bg-menu);
+}
+.w-100 {
+  width: 100%;
+}
+.text-right {
+  text-align: right;
+}
+.uppercase {
+  text-transform: capitalize;
+}
 
 /* scoll bar */
 

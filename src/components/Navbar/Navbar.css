@@ -3,9 +3,11 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   color: var(--txt-color-dark);
   background: var(--bg-primary);
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
+  max-height: 8rem;
   z-index: 10;
 }
 .Navbar ul li {
@@ -64,6 +66,7 @@
     position: absolute;
     top: 12px;
     right: 24px;
+    cursor: pointer;
   }
   .Navbar ul li {
     margin-bottom: 2.5rem;
@@ -72,6 +75,7 @@
     display: none;
   }
   .hamburger {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-around;

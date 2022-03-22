@@ -10,7 +10,7 @@ const Categories = () => {
         {categories &&
           categories.map((category) => (
             <div
-              className="card card-overlay cards-shadow mt-2 "
+              className="card card-overlay cards-shadow mt-2 pointer"
               key={category.id}
             >
               <img

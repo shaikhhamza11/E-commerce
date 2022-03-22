@@ -1,5 +1,5 @@
 import "./App.css";
-import { Navbar } from "./components/componentExport";
+import { Navbar, Footer } from "./components/componentExport";
 
 import React from "react";
 

@@ -6,12 +6,16 @@ import { useState } from "react";
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
+  const toggle = () => {
+    setIsActive((prevValue) => !prevValue);
+  };
+
   return (
     <header className="header flex align-center justify-sb p-2-5 fw-bold ">
       <NavLink to="/" className="navbar-brand fs-3">
         SportsKart
       </NavLink>
-      <nav className="Navbar">
+      <nav className="Navbar" onClick={() => (isActive ? toggle() : "")}>
         <ul
           className={`flex align-center justify-sb p-2  ${
             isActive ? "toggle" : ""
@@ -77,13 +81,10 @@ export default function Navbar() {
               Sign-up
             </NavLink>
           </li>
-          <i
-            className="close-navbar fa-solid fa-xmark fa-1x"
-            onClick={() => setIsActive(false)}
-          ></i>
+          <i className="close-navbar fa-solid fa-xmark fa-1x"></i>
         </ul>
       </nav>
-      <div className="hamburger" onClick={() => setIsActive(true)}>
+      <div className="hamburger" onClick={toggle}>
         <i className="fa-solid fa-bars" id="bar"></i>
       </div>
     </header>

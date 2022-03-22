@@ -13,7 +13,7 @@
   grid-area: hero-img;
   display: flex;
   align-items: center;
-  width: 50rem;
+  max-width: 50rem;
 }
 .Hero .hero-content {
   grid-area: hero-content;

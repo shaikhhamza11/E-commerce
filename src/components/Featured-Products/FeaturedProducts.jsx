@@ -8,7 +8,7 @@ const FeaturedProducts = () => {
     <div className="featured-product center">
       <h1 className="mt-1 fs-dxl">Featured product</h1>
       <h3 className="fs-l">Our Hero products</h3>
-      <div className="product-container">
+      <div className="product-container p-4">
         {products &&
           products
             .filter((prod) => prod.isFeatured)
